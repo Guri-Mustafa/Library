@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library Admin</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="library-header">
+      <div class="header-container">
+        <div>
+          <span class="logo-text">Public Library</span>
+          <span class="logo-tag">Discover • Learn • Grow</span>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+          <ul>
+            <li><a href="login.html">Home</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <form id="addBookForm" class="add-book-form">
+        <input type="text" id="bookTitle" placeholder="Book Title" required />
+        <input type="text" id="bookImage" placeholder="Image URL" required />
+        <button type="submit">Add Book</button>
+      </form>
+      <div class="admin-container">
+        <div class="books-container" id="adminBooksContainer">
+          <!--librat do te jen ketu -->
+        </div>
+      </div>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>
