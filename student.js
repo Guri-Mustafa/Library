@@ -26,3 +26,22 @@ function renderBooks() {
   });
 }
 document.addEventListener("DOMContentLoaded", renderBooks);
+
+const searchInput = document.querySelector(".search-input");
+const bookCards = document.querySelectorAll(".book-card");
+
+searchInput.addEventListener("input", function () {
+  const search = searchInput.value.toLowerCase();
+
+  for (let i = 0; i < bookCards.length; i++) {
+    const bookTitle = bookCards[i]
+      .querySelector(".book-title")
+      .textContent.toLowerCase();
+
+    if (bookTitle.includes(search) || search === "") {
+      bookCards[i].style.display = "block";
+    } else {
+      bookCards[i].style.display = "none";
+    }
+  }
+});
